@@ -66,7 +66,33 @@ body {
   .skill-icon {
     font-size: 5rem !important;
   }  
+
+  /* Sección de testimonios sin fondo */
+#testimonios {
+    background: transparent;
+  }
   
+  /* Slider continuo de testimonios */
+  .testimonials-slider {
+    overflow: hidden;
+  }
+  .testimonials-track {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 20s linear infinite;
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  
+  /* Cada testimonio en línea y semitransparente */
+  .testimonial-item {
+    flex: 0 0 auto;
+    width: 20rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }  
 
   /* Ajustes para pantallas pequeñas */
   @media (max-width: 768px) {
